@@ -60,4 +60,8 @@ where
     pub fn iter_mut(&mut self) -> impl Iterator<Item = (K, &mut V)> {
         self.slab.iter_mut().map(|(idx, v)| (idx.into(), v))
     }
+
+    pub fn len(&self) -> usize {
+        self.slab.len()
+    }
 }
