@@ -15,4 +15,4 @@ categories = ["memory-management", "data-structures"]
 license = "MIT OR Apache-2.0"
 
 [dependencies]
-slab = "0.4.3"
+slab = "0.4.4"
