@@ -1,10 +1,7 @@
 [package]
 name = "typed-slab"
-version = "0.1.3"
-authors = [
-    "Denis Kolodin <deniskolodin@gmail.com>",
-    "overfloat <rillrate@gmail.com>",
-]
+version = "0.1.4"
+authors = ["Denis Kolodin <deniskolodin@gmail.com>"]
 edition = "2018"
 repository = "https://github.com/rate-technology/typed-slab"
 homepage = "https://github.com/rate-technology/typed-slab"
@@ -12,7 +9,7 @@ description = "Typed wrapper for Slab"
 readme = "README.md"
 keywords = ["slab", "allocator"]
 categories = ["memory-management", "data-structures"]
-license = "MIT OR Apache-2.0"
+license = "MIT"
 
 [dependencies]
 slab = "0.4.4"
