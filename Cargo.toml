@@ -12,4 +12,4 @@ categories = ["memory-management", "data-structures"]
 license = "MIT"
 
 [dependencies]
-slab = "0.4.4"
+slab = "0.4.5"
