@@ -1,7 +1,7 @@
 pub use slab::Slab;
 use std::marker::PhantomData;
 
-#[derive(Debug)]
+#[derive(Debug, Default)]
 pub struct TypedSlab<K, V> {
     slab: Slab<V>,
     _key: PhantomData<K>,
