@@ -1,10 +1,19 @@
 pub use slab::Slab;
 use std::marker::PhantomData;
 
-#[derive(Debug, Default)]
+#[derive(Debug)]
 pub struct TypedSlab<K, V> {
     slab: Slab<V>,
     _key: PhantomData<K>,
+}
+
+impl<K, V> Default for TypedSlab<K, V> {
+    fn default() -> Self {
+        Self {
+            slab: Slab::default(),
+            _key: PhantomData,
+        }
+    }
 }
 
 impl<K, V> TypedSlab<K, V>
