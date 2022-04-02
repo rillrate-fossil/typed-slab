@@ -1,6 +1,6 @@
 [package]
 name = "typed-slab"
-version = "0.1.7"
+version = "0.1.8"
 authors = ["Denis Kolodin <deniskolodin@gmail.com>"]
 edition = "2018"
 repository = "https://github.com/rate-technology/typed-slab"
