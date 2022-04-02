@@ -63,15 +63,26 @@ where
         self.slab.is_empty()
     }
 
-    pub fn iter(&self) -> impl Iterator<Item = (K, &V)> {
+    pub fn iter(&self) -> impl DoubleEndedIterator<Item = (K, &V)> {
         self.slab.iter().map(|(idx, v)| (idx.into(), v))
     }
 
-    pub fn iter_mut(&mut self) -> impl Iterator<Item = (K, &mut V)> {
+    pub fn iter_mut(&mut self) -> impl DoubleEndedIterator<Item = (K, &mut V)> {
         self.slab.iter_mut().map(|(idx, v)| (idx.into(), v))
     }
 
     pub fn len(&self) -> usize {
         self.slab.len()
+    }
+}
+
+#[cfg(test)]
+mod test {
+    use super::*;
+
+    #[test]
+    fn test_rev() {
+        let slab: TypedSlab<usize, ()> = TypedSlab::new();
+        let _iter = slab.iter().rev();
     }
 }
